@@ -6,7 +6,9 @@ class RoomSensor(Device):
 
     @handleNotSupported
     def getSerial(self):
-        return self.service.getProperty("device.sensors.temperature")["deviceId"]
+#        return self.getId()
+        return self.service.accessor.device_id
+#        return self.service.getProperty("device.sensors.temperature")["deviceId"]
 
     @handleNotSupported
     def getTemperature(self):
